@@ -7,11 +7,13 @@
     <title>去除换行，添加顿号</title>
 </head>
 <body>
-    <textarea id="names" type="text" placeholder="输入名称，每个机构占一行" rows="25" cols="50" ></textarea>
-    <div>
-        <button id="add" onclick="add_comma()" >转换</button>
-    </div>
-    <p id="output" ></p>
+    <center>
+        <textarea id="names" type="text" placeholder="输入名称，每个机构占一行" rows="30" cols="50" ></textarea>
+        <div>
+            <button id="add" onclick="add_comma()" >转换</button>
+        </div>
+        <p id="output" ></p>
+    </center>
     <script>
         function add_comma(){
             let text = document.getElementById("names").value;
