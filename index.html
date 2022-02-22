@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加逗号</title>
+</head>
+<body>
+    <textarea id="names" type="text" placeholder="输入名称，每个机构占一行" rows="25" cols="50" ></textarea>
+    <div>
+        <button id="add" onclick="add_comma()" >转换</button>
+    </div>
+    <h3 id="output" ></h3>
+    <script>
+        function add_comma(){
+            let text = document.getElementById("names").value;
+            let res = text.replaceAll("\n", "、");
+            document.getElementById("output").innerHTML = res;
+        }
+    </script>
+</body>
+</html>
