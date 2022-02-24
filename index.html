@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>去除换行，添加顿号</title>
+    <title>编辑小助手</title>
 </head>
 <body>
     <center>
-        <textarea id="names" type="text" placeholder="输入名称，每个机构占一行" rows="30" cols="50" ></textarea>
+        <textarea id="names" type="text" placeholder="输入名称" rows="30" cols="50" ></textarea>
         <div>
-            <button id="add" onclick="add_comma()" >转换</button>
+            <button id="comma" style="margin-right: 30px;" onclick="add_comma()" >换行转为顿号</button>
+            <button id="douhao" style="margin-right: 30px;" onclick="change_to_douhao()" >顿号转为逗号</button>
+            <!-- <button id="clear" onclick="clear()" >❌ 清空</button> -->
         </div>
         <p id="output" ></p>
     </center>
@@ -18,6 +20,12 @@
         function add_comma(){
             let text = document.getElementById("names").value;
             let res = text.replaceAll("\n", "、");
+            document.getElementById("output").innerHTML = res;
+        }
+
+        function change_to_douhao() {
+            let text = document.getElementById("names").value;
+            let res = text.replaceAll("、", "，");
             document.getElementById("output").innerHTML = res;
         }
     </script>
